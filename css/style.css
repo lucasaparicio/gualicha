@@ -142,8 +142,9 @@ h1 {
 .grid {
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: repeat(8,120px);
-    grid-auto-rows: 240px;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
     margin: 100px;
     min-height: 100vh;
     max-width: 1200px; 
@@ -151,15 +152,50 @@ h1 {
     align-items: center;
 }
 
+/* Las columnas en auto toman la altura de su contenido. Pero pasa algo raro. Si yo le pongo a los elementos diferentes coordenadas de columnas, va a crear las subdivisiones para dejar espacios de rows equivalentes a fracciones de la imagen.
+
+Por ejemplo, si una imagen tiene span 3, y está en row 1, ocuparía tres subdivisiones. En base a eso, la siguiente la pongo en row 2, va a dejar un espacio arriba de 1/3 de la primera en base a esas subdivisiones que hizo. Todavía no lo entiendo mucho.*/
+
 .grid-image-container {
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .grid-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 10px;
+    height: auto;
+}
+
+/* Relación de aspecto 16:9 */
+
+/* Acá creo una caja sin altura y con un padding-top de 56.25 (16/9=0.5625. Esto genera la relación de aspecto que quiero. 
+
+El padding-top se basa en width. El ancho se lo dará la coordenada de la grilla, en este caso es span 8.
+
+Al darle height:0, la altura la define este padding. 
+
+El padding me empuja el contenido hacia abajo, fuera de la caja. con overflow: hidden oculto el excedente. 
+
+Le doy position: relative para darle absolute a la imagen.*/
+
+
+.aspect-ratio-16-9 {
+    padding-top: 56.25%;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* La imagen, por otro lado, ocupará el 100% del ancho de su padre. La altura no la defino o sino se estruja todo.
+
+Con position: absolute lo pongo arriba a la izquierda en el 0 del elemento que tiene absolute.
+
+Si a top le pongo números negativos la imagen va subiendo y así la pongo en su caja. Pero de esta forma me aseguro que algo quede 16:9 aunque se pase un toque de tamaño.*/
+
+.grid-image2 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
 }
 
 .grid-item1 {
@@ -233,7 +269,7 @@ h1 {
 
 .grid-item12 {
     grid-column: 5 / span 4;
-    grid-row: 19 / span 3;
+    grid-row: 19 / span 4;
 
 }
 
