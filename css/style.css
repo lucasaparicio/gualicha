@@ -38,11 +38,32 @@ html, body {
     src: url("/fuentes/Jost-700-Bold.otf") format("opentype");
 }
 
+@font-face {
+    font-family: Mixo;
+    font-weight: normal;
+    src: url("/fuentes/Mixo-Regular_web.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Savate;
+    font-weight: normal;
+    src: url("/fuentes/savate-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Savate;
+    font-weight: normal;
+    font-style: italic;
+    src: url("/fuentes/savate-italique.otf") format("opentype");
+}
+
+
 h1 {
     text-transform: uppercase;
-    font-family: Monument Extended;
+    font-family: Mixo;
     font-weight: normal; 
     color:white;
+    letter-spacing: 2px;
 }
 
 
@@ -62,7 +83,7 @@ h1 {
 }
 
 .links {
-    font-family: Jost;
+    font-family: Savate;
     font-weight: normal;
     padding: 20px;
     text-decoration: none;
@@ -84,8 +105,8 @@ h1 {
 }
 
 .parrafo {
-    font-family: Jost;
-    font-weight: 500;
+    font-family: Savate;
+    font-weight: normal;
     color: white;
     font-size: 24;
 }
@@ -98,7 +119,7 @@ h1 {
     overflow: hidden;
 }
 
-.nav-left a{
+nav a{
     width: 150px;
 }
 
@@ -107,7 +128,7 @@ h1 {
 
 .links-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -126,8 +147,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     height: 450px;
+    margin-bottom: 180px;
 }
 
 .isologo-placeholder {
@@ -149,7 +171,7 @@ h1 {
     min-height: 100vh;
     max-width: 1200px; 
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 /* Las columnas en auto toman la altura de su contenido. Pero pasa algo raro. Si yo le pongo a los elementos diferentes coordenadas de columnas, va a crear las subdivisiones para dejar espacios de rows equivalentes a fracciones de la imagen.
@@ -193,6 +215,8 @@ Si a top le pongo números negativos la imagen va subiendo y así la pongo en su
 
 .grid-image2 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0; 
@@ -205,27 +229,25 @@ Si a top le pongo números negativos la imagen va subiendo y así la pongo en su
 
 .grid-item2 {
     grid-column: 1 / span 4;
-    grid-row: 4 / span 2;
+    grid-row: 4 / span 3;
 
 }
 
 .grid-item3 {
     grid-column: 5 / span 4;
-    grid-row: 5 / span 2;
+    grid-row: 5 / span 4;
 
 }
 
-.grid-item4 {
-    grid-column: 1 / span 4;
-    grid-row: 6 / span 2;
-
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
-.grid-item5 {
-    grid-column: 5 / span 4;
-    grid-row: 7 / span 2;
-
+.flex-image {
+    margin: 10px 0;
 }
+
 
 /* Acá iría un espacio con unos svg */
 
@@ -269,7 +291,7 @@ Si a top le pongo números negativos la imagen va subiendo y así la pongo en su
 
 .grid-item12 {
     grid-column: 5 / span 4;
-    grid-row: 19 / span 4;
+    grid-row: 20 / span 4;
 
 }
 
