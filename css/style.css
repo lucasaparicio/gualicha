@@ -167,7 +167,7 @@ nav a{
     grid-template-columns: repeat(8,1fr);
     grid-template-rows: auto;
     grid-auto-rows: auto;
-    margin: 100px;
+    margin: auto;
     min-height: 100vh;
     max-width: 1200px; 
     justify-content: center;
