@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    cursor: url('http://pixelartmaker.com/art/ca28a3886c41224.png'), auto;
 }
 
 body {
@@ -18,6 +19,8 @@ html, body {
     font-weight: bold;
     src: url("/fuentes/Hanson-Bold.otf") format("opentype");
 }
+
+
 .home-video-container {
     height: 100vh;
     overflow: hidden;
@@ -43,6 +46,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .title {
@@ -66,13 +70,13 @@ html, body {
     padding: 60px 0;
 }
 
-nav {
+nav,footer {
     display: flex;
     width: 700px;
     justify-content: space-around;
 }
 
-nav a{
+a{
     text-decoration: none;
     color: white;
     font-size: 18pt;
@@ -81,10 +85,21 @@ nav a{
     padding: 10px;
 }
 
-nav a:hover {
+a:hover {
     text-decoration: none;
     color: white;
     font-weight: 600;
+}
+
+
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
 }
 
 /* Prueba Flex */
@@ -92,8 +107,8 @@ nav a:hover {
 .flex-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 40%;
+    justify-content: center;
+    height: 50%;
     margin: 0 70px;
 }
 
@@ -103,19 +118,38 @@ nav a:hover {
 }
 
 .x1 {
-    width: 25%;
+    width: 33%;
 }
 
 .x2 {
-    width: 75%;
+    width: 66%;
 }
 
+.xmitad {
+    width: 50%;
+}
+
+.p-left {
+    padding-left: 10px;
+}
+
+.p-right {
+    padding-right: 10px;
+}
 
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 @media (max-width: 768px) {
