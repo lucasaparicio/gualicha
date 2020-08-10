@@ -333,5 +333,9 @@ iframe {
     .container-footer {
         margin-top: 30px;
     }
+
+    .home-video-container {
+        display: none;
+    }
    
 }
