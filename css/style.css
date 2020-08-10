@@ -74,6 +74,10 @@ html, body {
     padding: 60px 0;
 }
 
+h1 {
+    margin-bottom: 50px;
+}
+
 h2 {
     font-family: Hanson Bold;
     font-size: 3vw;
@@ -105,7 +109,7 @@ a{
     font-size: 18pt;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    padding: 10px;
+    padding: 20px;
 }
 
 a:hover {
@@ -236,10 +240,14 @@ iframe {
     .title, .title-page {
         color: white;
         -webkit-text-stroke: 0px transparent;
-        font-size: 8vw;
+        font-size: 9vw;
         
         
         
+    }
+
+    .title-page {
+        padding: 100px 0 50px 0;
     }
     
     h2 {
@@ -277,12 +285,14 @@ iframe {
     .flex-responsive {
         display: flex;
         width: 100%;
-        padding: 10px;
+        height: auto;
+        padding: 0 10px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0px;
     }
+
 
     .container-alignment {
         margin-bottom: 80px;
@@ -290,15 +300,25 @@ iframe {
 
     .xr {
         width: 100%;
+        height: 100%;
         height: auto;
     }
 
     .p-left {
-        padding-left: 0;
+        padding-left: 5px;
     }
 
     .p-right {
-        padding-right: 0;
+        padding-right: 5px;
     }
 
+    .p-left2 {
+        padding-left: 0;
+    }
+
+    .p-leftr {
+        padding-left: 20px;
+    }
+
+   
 }
