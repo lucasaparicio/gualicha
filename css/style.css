@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #1c1a1a;
+    background-color: #303030;
     margin: 0;
     color: white;
 }
@@ -131,7 +131,7 @@ a:hover {
 
 }
 
-/* Prueba Flex */
+/* Flex */
 
 .flex-row {
     display: flex;
@@ -164,8 +164,6 @@ a:hover {
     align-items: stretch;
     justify-content: space-between;
 }
-
-
 
 
 .flex-image {
@@ -202,12 +200,6 @@ img {
     width: 100%;
     object-fit: cover;
 }
-
-
-
-
-
-
 
 video {
     height: 100%;
@@ -286,6 +278,24 @@ iframe {
         padding: 20px;
     }
 
+
+    
+    .about {
+        margin: 0;
+        margin-top: 60px;
+        padding: 20px;
+    }
+    
+    .container-footer {
+        margin-top: 30px;
+    }
+    
+    .home-video-container {
+        display: none;
+    }
+    
+/* Flex  */
+
     .flex-responsive {
         display: flex;
         width: 100%;
@@ -323,19 +333,4 @@ iframe {
     .p-leftr {
         padding-left: 20px;
     }
-
-    .about {
-        margin: 0;
-        margin-top: 60px;
-        padding: 20px;
-    }
-
-    .container-footer {
-        margin-top: 30px;
-    }
-
-    .home-video-container {
-        display: none;
-    }
-   
 }
